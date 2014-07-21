@@ -12,16 +12,57 @@
 	<meta property="og:url" content="http://twoelevenjay.github.io/" />
 	<meta property="og:site_name" content="211J GIT" />
 	<link rel='stylesheet' id='stylesheet-css'  href='style.css' type='text/css' media='all' />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 	<title>211J GIT</title>
 </head>
 <body>
 <div id="wrapper">
 <div id="cell">
+<div class="thumb scroll">
+<div class="thumb-wrapper">
 <header id="header" class="metal radial">
+<img src="images/211j-logo.png" />
+<div class="thumb-detail">
 <h1 class="title">211J GIT</h1>
 <p class="description">Leon Shelhamer's Github Pages for Two Eleven Jay fun.</p>
+</div>
 </header>
 </div>
 </div>
+</div>
+</div>
+<script type="text/javascript">
+	$(function () {
+
+
+		if ($('html').hasClass('csstransforms3d')) {	
+	
+			$('.thumb').removeClass('scroll').addClass('flip');		
+			$('.thumb.flip').hover(
+				function () {
+					$(this).find('.thumb-wrapper').addClass('flipIt');
+				},
+				function () {
+					$(this).find('.thumb-wrapper').removeClass('flipIt');			
+				}
+			);
+		
+		} else {
+
+			$('.thumb').hover(
+				function () {
+					$(this).find('.thumb-detail').stop().animate({bottom:0}, 500, 'easeOutCubic');
+				},
+				function () {
+					$(this).find('.thumb-detail').stop().animate({bottom: ($(this).height() * -1) }, 500, 'easeOutCubic');			
+				}
+			);
+
+		}
+
+	});
+</script>
 </body>
 </html>
