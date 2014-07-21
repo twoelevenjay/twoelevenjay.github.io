@@ -18,51 +18,92 @@
 	<title>211J GIT</title>
 </head>
 <body>
-<div id="wrapper">
-<div id="cell">
-<div class="thumb scroll">
-<div class="thumb-wrapper">
-<header id="header" class="metal radial">
-<img src="images/211j-logo.png" />
-<div class="thumb-detail">
-<h1 class="title">211J GIT</h1>
-<p class="description">Leon Shelhamer's Github Pages for Two Eleven Jay fun.</p>
-</div>
-</header>
-</div>
-</div>
-</div>
-</div>
-<script type="text/javascript">
-	$(function () {
-
-
-		if ($('html').hasClass('csstransforms3d')) {	
-	
-			$('.thumb').removeClass('scroll').addClass('flip');		
-			$('.thumb.flip').hover(
-				function () {
-					$(this).find('.thumb-wrapper').addClass('flipIt');
-				},
-				function () {
-					$(this).find('.thumb-wrapper').removeClass('flipIt');			
-				}
-			);
+	<div id="wrapper">
+		<div id="cell">
 		
-		} else {
+			<div class="211j thumb scroll">
+				<div class="thumb-wrapper">
+					<a href="https://211j.com/">
+						<div class="img-wrap">
+							<img src="images/211j-logo.png" />
+							<div class="thumb-detail"></div>
+						</div>
+					</a>
+				</div>
+			</div>
 
-			$('.thumb').hover(
-				function () {
-					$(this).find('.thumb-detail').stop().animate({bottom:0}, 500, 'easeOutCubic');
-				},
-				function () {
-					$(this).find('.thumb-detail').stop().animate({bottom: ($(this).height() * -1) }, 500, 'easeOutCubic');			
-				}
-			);
+			<div class="social facebook thumb scroll">
+				<div class="thumb-wrapper">
+					<a href="https://www.facebook.com/leon.f.shelhamer">
+						<div class="img-wrap">
+							<img alt="facebook" src="images/facebook.png" />
+							<div class="thumb-detail"></div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="social github thumb scroll">
+				<div class="thumb-wrapper">
+					<a href="https://github.com/twoelevenjay">
+					<div class="img-wrap">
+						<img alt="github" src="images/github.png" />
+						<div class="thumb-detail"></div>
+					</div>
+					</a>
+				</div>
+			</div>
+			<div class="social twitter thumb scroll">
+				<div class="thumb-wrapper">
+					<a href="https://twitter.com/francismhwhite1">
+						<div class="img-wrap">
+							<img alt="twitter" src="images/twitter.png" />
+							<div class="thumb-detail"></div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="social instagram thumb scroll">
+				<div class="thumb-wrapper">
+					<a href="http://instagram.com/leon.shelhamer">
+						<div class="img-wrap">
+							<img alt="instagram" src="images/instagram.png" />
+							<div class="thumb-detail"></div>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function () {
 
-		}
+			if ($('html').hasClass('csstransforms3d')) {	
+	
+				$('.thumb').removeClass('scroll').addClass('flip');		
+				$('.thumb.flip').hover(
+					function () {
+						$(this).find('.thumb-wrapper').addClass('flipIt');
+					},
+					function () {
+						$(this).find('.thumb-wrapper').removeClass('flipIt');			
+					}
+				);
+		
+			} else {
 
-	});
-</script>
+				$('.thumb').hover(
+					function () {
+						$(this).find('.thumb-detail').stop().animate({bottom:0}, 500, 'easeOutCubic');
+					},
+					function () {
+						$(this).find('.thumb-detail').stop().animate({bottom: ($(this).height() * -1) }, 500, 'easeOutCubic');			
+					}
+				);
+
+			}
+
+		});
+	</script>
 </body>
 </html>
